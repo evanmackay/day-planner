@@ -1,11 +1,14 @@
 $(document).ready(function () {
+    // variable grabbing the id from the html
     let currentDay = $('#currentDay')
     
-    
+    // displays the current date at the top of the page
     currentDay.text(moment().format('dddd MMMM Do YYYY'))
+    // function that presents the users saved information
     addToSchedule()
     
 })
+// event listeners to save and display the user input from the text area. information is saved in local storage and pushed from local storage
     $('#saveNine').click(function () {
         let timeSlot = "#inputNine"
         let details = document.getElementById('inputNine').value
@@ -70,7 +73,7 @@ $(document).ready(function () {
     })
 
     
-    
+    // function that saves the users text input to local storage
     function saveAppointment(time, details) {
         const newAppointment = {
             time: time,
@@ -86,7 +89,7 @@ $(document).ready(function () {
         localStorage.setItem('newArray', JSON.stringify(newArray))
         
     }
-
+    // function that adds the saved items from local storage to the html
     function addToSchedule() {
         newArray = JSON.parse(localStorage.getItem("newArray")) || [];
 
@@ -96,11 +99,10 @@ $(document).ready(function () {
             }
         })
     }
-
+    // static variables that set parameters for the time to be checked in the time checking function
     let newArray = [];
     let time = moment();
     let timeFormat = 'hh:mma'
-    let reset = moment('12:00am', timeFormat)
     let nineStart = moment('9:00am',timeFormat)
     let nineEnd = moment('9:59am', timeFormat)
     let tenStart = moment('10:00am', timeFormat)
@@ -119,11 +121,11 @@ $(document).ready(function () {
     let fourEnd = moment('4:59pm', timeFormat)
     let fiveStart = moment('5:00pm', timeFormat)
     let fiveEnd = moment('5:59pm', timeFormat)
-
+    // runs the time function every second to update the color of the page depending on the time
     setInterval(function () {
         checkTime();
     }, 1000);
-
+// checks times against their static variables and adds classes to the specified html which then changes the color based on the time it is
     function checkTime() {
         if (time.isBefore(nineStart)) {
             $('#inputNine').addClass('future')
@@ -195,19 +197,7 @@ $(document).ready(function () {
             $('#inputFive').addClass('present')
         } else if (time.isAfter(fiveEnd)) {
             $('#inputFive').addClass('past')
-        }
-
-
-
-
-
-
-
-
-
-
-
-        
+        }     
     }
 
 

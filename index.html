@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap link -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- fontawesome link -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- google api link -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- link to external css -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -29,7 +33,7 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- Time Block 9 -->
         <div class="row time-block" id="time-nine" style="font-size: 30px;">
             <div class="col-md-1 hour"  value= "9">9am</div>
             <textarea class="col-md-10 description" id="inputNine"></textarea>
@@ -37,6 +41,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 10 -->
         <div class="row time-block" id="time-ten" style="font-size: 30px;" value= "10">
             <div class="col-md-1 hour">10am</div>
             <textarea class="col-md-10 description" id="inputTen"></textarea>
@@ -44,6 +49,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 11 -->
         <div class="row time-block" id="time-eleven" style="font-size: 30px;">
             <div class="col-md-1 hour">11am</div>
             <textarea class="col-md-10 description" id="inputEleven"></textarea>
@@ -51,6 +57,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 12 -->
         <div class="row time-block" id="time-twelve" style="font-size: 30px;">
             <div class="col-md-1 hour">12am</div>
             <textarea class="col-md-10 description" id="inputTwelve"></textarea>
@@ -58,6 +65,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 1 -->
         <div class="row time-block" id="time-one" style="font-size: 30px;">
             <div class="col-md-1 hour">1pm</div>
             <textarea class="col-md-10 description" id="inputOne"></textarea>
@@ -65,6 +73,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 2 -->
         <div class="row time-block" id="time-two" style="font-size: 30px;">
             <div class="col-md-1 hour">2pm</div>
             <textarea class="col-md-10 description" id="inputTwo"></textarea>
@@ -72,6 +81,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 3 -->
         <div class="row time-block" id="time-three" style="font-size: 30px;">
             <div class="col-md-1 hour">3pm</div>
             <textarea class="col-md-10 description" id="inputThree"></textarea>
@@ -79,6 +89,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 4 -->
         <div class="row time-block" id="time-four" style="font-size: 30px;">
             <div class="col-md-1 hour">4pm</div>
             <textarea class="col-md-10 description" id="inputFour"></textarea>
@@ -86,6 +97,7 @@
                 <i class="fas fa-save"></i>
             </button>
         </div>
+        <!-- Time Block 5 -->
         <div class="row time-block" id="time-five" style="font-size: 30px;">
             <div class="col-md-1 hour">5pm</div>
             <textarea class="col-md-10 description" id="inputFive"></textarea>
@@ -94,9 +106,11 @@
             </button>
         </div>
     </div>
-
+    <!-- link to jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- link to moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- link to external js -->
     <script src="./script.js"></script>
   </body>
 </html>
